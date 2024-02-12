@@ -13,10 +13,16 @@ protocol GenreWireframeInterface: WireframeInterface {
 }
 
 protocol GenreViewInterface: ViewInterface {
+    func update(with genres: [Genre])
+    func update(with error: String)
 }
 
 protocol GenrePresenterInterface: PresenterInterface {
+    func fetchListGenre()
+    
+    func interactorDidFetchGenre(with result: Result<[Genre], Error>)
 }
 
 protocol GenreInteractorInterface: InteractorInterface {
+    func fetchListGenre()
 }

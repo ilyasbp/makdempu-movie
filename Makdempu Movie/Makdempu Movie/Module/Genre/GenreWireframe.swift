@@ -20,6 +20,7 @@ final class GenreWireframe: BaseWireframe<GenreViewController> {
         let interactor = GenreInteractor()
         let presenter = GenrePresenter(view: moduleViewController, interactor: interactor, wireframe: self)
         moduleViewController.presenter = presenter
+        interactor.presenter = presenter
     }
 
 }

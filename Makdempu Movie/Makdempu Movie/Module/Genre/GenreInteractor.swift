@@ -10,9 +10,28 @@
 import Foundation
 
 final class GenreInteractor {
+    var presenter: GenrePresenter?
 }
 
 // MARK: - Extensions -
 
 extension GenreInteractor: GenreInteractorInterface {
+    func fetchListGenre() {
+        guard let url = URL(string: "\(APIConstants.baseURL)/genre/movie/list?api_key=\(APIConstants.key)") else { return }
+        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response,error in
+            guard let data = data, error == nil else {
+                return
+            }
+            
+            do {
+                let entities = try JSONDecoder().decode(GenreResponse.self, from: data)
+                self?.presenter?.interactorDidFetchGenre(with: .success(entities.genres))
+            }
+            catch {
+                self?.presenter?.interactorDidFetchGenre(with: .failure(error))
+            }
+        }
+        task.resume()
+    }
+    
 }

@@ -29,4 +29,16 @@ final class GenrePresenter {
 // MARK: - Extensions -
 
 extension GenrePresenter: GenrePresenterInterface {
+    func interactorDidFetchGenre(with result: Result<[Genre], Error>) {
+        switch result {
+        case .success(let genres):
+            view.update(with: genres)
+        case .failure:
+            view.update(with: "Periksa kembali internet anda")
+        }
+    }
+    
+    func fetchListGenre() {
+        interactor.fetchListGenre()
+    }
 }

@@ -29,8 +29,8 @@ final class DashboardViewController: UIViewController {
     @IBAction func dramaTapped(_ sender: Any) {
     }
     @IBAction func moreTapped(_ sender: Any) {
-//        presenter.routeToGenre()
-        self.navigationController?.pushViewController(GenreViewController(), animated: true)
+        presenter.routeToGenre()
+//        self.navigationController?.pushViewController(GenreViewController(), animated: true)
     }
 }
 

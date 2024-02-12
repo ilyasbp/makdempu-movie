@@ -28,7 +28,7 @@ final class DashboardWireframe: BaseWireframe<DashboardViewController> {
 
 extension DashboardWireframe: DashboardWireframeInterface {
     func routeToGenre() {
-//        let vc = GenreWireframe().viewController
+//        let vc = Genre2Router.createModule()
         self.navigationController?.pushWireframe(GenreWireframe())
 //        self.viewController.navigationController?.pushViewController(vc, animated: true)
     }
