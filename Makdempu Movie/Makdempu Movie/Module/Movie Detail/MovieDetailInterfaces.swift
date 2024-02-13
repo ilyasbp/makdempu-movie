@@ -10,6 +10,7 @@
 import UIKit
 
 protocol MovieDetailWireframeInterface: WireframeInterface {
+    func routeToReview(with movieId: Int)
 }
 
 protocol MovieDetailViewInterface: ViewInterface {
@@ -28,6 +29,8 @@ protocol MovieDetailPresenterInterface: PresenterInterface {
     func getMovieTrailer(with movieId: Int)
     
     func interactorDidFetchTrailer(with result: Result<[Trailer], Error>)
+    
+    func goToReview(with movieId: Int)
 }
 
 protocol MovieDetailInteractorInterface: InteractorInterface {

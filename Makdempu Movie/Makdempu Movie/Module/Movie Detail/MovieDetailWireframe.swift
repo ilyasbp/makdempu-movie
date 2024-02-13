@@ -29,4 +29,8 @@ final class MovieDetailWireframe: BaseWireframe<MovieDetailViewController> {
 // MARK: - Extensions -
 
 extension MovieDetailWireframe: MovieDetailWireframeInterface {
+    func routeToReview(with movieId: Int) {
+        navigationController?.pushWireframe(ReviewWireframe(movieId: movieId))
+    }
+    
 }

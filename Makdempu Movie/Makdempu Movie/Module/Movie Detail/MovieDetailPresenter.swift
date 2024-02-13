@@ -29,6 +29,10 @@ final class MovieDetailPresenter {
 // MARK: - Extensions -
 
 extension MovieDetailPresenter: MovieDetailPresenterInterface {
+    func goToReview(with movieId: Int) {
+        wireframe.routeToReview(with: movieId)
+    }
+    
     func getMovieTrailer(with movieId: Int) {
         interactor.fetchMovieTrailer(with: movieId)
     }

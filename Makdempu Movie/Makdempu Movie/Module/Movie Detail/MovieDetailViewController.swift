@@ -47,7 +47,7 @@ final class MovieDetailViewController: UIViewController {
     }
     
     @IBAction func reviewTapped(_ sender: Any) {
-        
+        presenter.goToReview(with: movieId)
     }
 }
 

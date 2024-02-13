@@ -28,6 +28,15 @@
 		E968FFB12B7B8CB000B2AAA8 /* TrailerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FFAF2B7B8CB000B2AAA8 /* TrailerCell.swift */; };
 		E968FFB22B7B8CB000B2AAA8 /* TrailerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E968FFB02B7B8CB000B2AAA8 /* TrailerCell.xib */; };
 		E968FFB42B7B90D500B2AAA8 /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FFB32B7B90D500B2AAA8 /* Trailer.swift */; };
+		E968FFBB2B7BA48700B2AAA8 /* ReviewInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FFB52B7BA48700B2AAA8 /* ReviewInterfaces.swift */; };
+		E968FFBC2B7BA48700B2AAA8 /* ReviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FFB62B7BA48700B2AAA8 /* ReviewPresenter.swift */; };
+		E968FFBD2B7BA48700B2AAA8 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FFB72B7BA48700B2AAA8 /* ReviewViewController.swift */; };
+		E968FFBE2B7BA48700B2AAA8 /* ReviewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FFB82B7BA48700B2AAA8 /* ReviewInteractor.swift */; };
+		E968FFBF2B7BA48700B2AAA8 /* ReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E968FFB92B7BA48700B2AAA8 /* ReviewViewController.xib */; };
+		E968FFC02B7BA48700B2AAA8 /* ReviewWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FFBA2B7BA48700B2AAA8 /* ReviewWireframe.swift */; };
+		E968FFC22B7BA5C000B2AAA8 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FFC12B7BA5C000B2AAA8 /* Review.swift */; };
+		E968FFC52B7BA64600B2AAA8 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FFC32B7BA64600B2AAA8 /* ReviewCell.swift */; };
+		E968FFC62B7BA64600B2AAA8 /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E968FFC42B7BA64600B2AAA8 /* ReviewCell.xib */; };
 		E9D05B572B7A2073000D767F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D05B562B7A2073000D767F /* AppDelegate.swift */; };
 		E9D05B592B7A2073000D767F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D05B582B7A2073000D767F /* SceneDelegate.swift */; };
 		E9D05B5B2B7A2073000D767F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D05B5A2B7A2073000D767F /* ViewController.swift */; };
@@ -78,6 +87,15 @@
 		E968FFAF2B7B8CB000B2AAA8 /* TrailerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerCell.swift; sourceTree = "<group>"; };
 		E968FFB02B7B8CB000B2AAA8 /* TrailerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrailerCell.xib; sourceTree = "<group>"; };
 		E968FFB32B7B90D500B2AAA8 /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
+		E968FFB52B7BA48700B2AAA8 /* ReviewInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewInterfaces.swift; sourceTree = "<group>"; };
+		E968FFB62B7BA48700B2AAA8 /* ReviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPresenter.swift; sourceTree = "<group>"; };
+		E968FFB72B7BA48700B2AAA8 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		E968FFB82B7BA48700B2AAA8 /* ReviewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewInteractor.swift; sourceTree = "<group>"; };
+		E968FFB92B7BA48700B2AAA8 /* ReviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewViewController.xib; sourceTree = "<group>"; };
+		E968FFBA2B7BA48700B2AAA8 /* ReviewWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWireframe.swift; sourceTree = "<group>"; };
+		E968FFC12B7BA5C000B2AAA8 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		E968FFC32B7BA64600B2AAA8 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		E968FFC42B7BA64600B2AAA8 /* ReviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewCell.xib; sourceTree = "<group>"; };
 		E9D05B532B7A2073000D767F /* Makdempu Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Makdempu Movie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D05B562B7A2073000D767F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9D05B582B7A2073000D767F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +216,7 @@
 				E968FF742B7A918E00B2AAA8 /* Genre.swift */,
 				E968FFB32B7B90D500B2AAA8 /* Trailer.swift */,
 				E968FF9C2B7B2FBF00B2AAA8 /* Movie.swift */,
+				E968FFC12B7BA5C000B2AAA8 /* Review.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -260,6 +279,14 @@
 		E9D05B762B7A3A56000D767F /* Review */ = {
 			isa = PBXGroup;
 			children = (
+				E968FFC32B7BA64600B2AAA8 /* ReviewCell.swift */,
+				E968FFC42B7BA64600B2AAA8 /* ReviewCell.xib */,
+				E968FFB82B7BA48700B2AAA8 /* ReviewInteractor.swift */,
+				E968FFB52B7BA48700B2AAA8 /* ReviewInterfaces.swift */,
+				E968FFB62B7BA48700B2AAA8 /* ReviewPresenter.swift */,
+				E968FFB72B7BA48700B2AAA8 /* ReviewViewController.swift */,
+				E968FFB92B7BA48700B2AAA8 /* ReviewViewController.xib */,
+				E968FFBA2B7BA48700B2AAA8 /* ReviewWireframe.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -338,7 +365,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E968FFAD2B7B50C200B2AAA8 /* MovieDetailViewController.xib in Resources */,
+				E968FFC62B7BA64600B2AAA8 /* ReviewCell.xib in Resources */,
 				E968FF9B2B7B297D00B2AAA8 /* MovieListCell.xib in Resources */,
+				E968FFBF2B7BA48700B2AAA8 /* ReviewViewController.xib in Resources */,
 				E9D05B632B7A2075000D767F /* LaunchScreen.storyboard in Resources */,
 				E968FFB22B7B8CB000B2AAA8 /* TrailerCell.xib in Resources */,
 				E9D05B7A2B7A421D000D767F /* DashboardViewController.xib in Resources */,
@@ -397,10 +426,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E968FFBB2B7BA48700B2AAA8 /* ReviewInterfaces.swift in Sources */,
 				E968FF922B7B22DA00B2AAA8 /* MovieListInterfaces.swift in Sources */,
+				E968FFBD2B7BA48700B2AAA8 /* ReviewViewController.swift in Sources */,
 				E9D05BF32B7A7E89000D767F /* FormatterInterface.swift in Sources */,
 				E968FF932B7B22DA00B2AAA8 /* MovieListPresenter.swift in Sources */,
 				E968FF942B7B22DA00B2AAA8 /* MovieListViewController.swift in Sources */,
+				E968FFBE2B7BA48700B2AAA8 /* ReviewInteractor.swift in Sources */,
 				E9D05BE32B7A779F000D767F /* GenreViewController.swift in Sources */,
 				E9D05B5B2B7A2073000D767F /* ViewController.swift in Sources */,
 				E9D05BF22B7A7E89000D767F /* BaseWireframe.swift in Sources */,
@@ -417,15 +449,19 @@
 				E9D05BD62B7A7655000D767F /* DashboardPresenter.swift in Sources */,
 				E9D05BF92B7A87FC000D767F /* APIConstants.swift in Sources */,
 				E968FF9D2B7B2FBF00B2AAA8 /* Movie.swift in Sources */,
+				E968FFC22B7BA5C000B2AAA8 /* Review.swift in Sources */,
 				E9D05BF52B7A7E89000D767F /* PresenterInterface.swift in Sources */,
+				E968FFBC2B7BA48700B2AAA8 /* ReviewPresenter.swift in Sources */,
 				E9D05BE12B7A779F000D767F /* GenreInterfaces.swift in Sources */,
 				E968FFB12B7B8CB000B2AAA8 /* TrailerCell.swift in Sources */,
 				E968FFAC2B7B50C200B2AAA8 /* MovieDetailInteractor.swift in Sources */,
 				E9D05B572B7A2073000D767F /* AppDelegate.swift in Sources */,
+				E968FFC02B7BA48700B2AAA8 /* ReviewWireframe.swift in Sources */,
 				E9D05BF62B7A7E89000D767F /* ViewInterface.swift in Sources */,
 				E968FF952B7B22DA00B2AAA8 /* MovieListInteractor.swift in Sources */,
 				E9D05BD82B7A7655000D767F /* DashboardInteractor.swift in Sources */,
 				E968FFA22B7B420F00B2AAA8 /* ExtUIImageView.swift in Sources */,
+				E968FFC52B7BA64600B2AAA8 /* ReviewCell.swift in Sources */,
 				E9D05BD52B7A7655000D767F /* DashboardInterfaces.swift in Sources */,
 				E9D05BF42B7A7E89000D767F /* UIStoryboardExtension.swift in Sources */,
 				E9D05BDA2B7A7655000D767F /* DashboardWireframe.swift in Sources */,
