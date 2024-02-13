@@ -10,6 +10,7 @@
 import UIKit
 
 protocol GenreWireframeInterface: WireframeInterface {
+    func routeToMovieList(with genreId: Int)
 }
 
 protocol GenreViewInterface: ViewInterface {
@@ -21,6 +22,8 @@ protocol GenrePresenterInterface: PresenterInterface {
     func fetchListGenre()
     
     func interactorDidFetchGenre(with result: Result<[Genre], Error>)
+    
+    func goToMovieList(with genreId: Int)
 }
 
 protocol GenreInteractorInterface: InteractorInterface {

@@ -46,6 +46,7 @@ extension GenreViewController: GenreViewInterface {
     func update(with error: String) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alert, animated: true,completion: nil)
         }
     }
@@ -65,5 +66,7 @@ extension GenreViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter.goToMovieList(with: self.genres[indexPath.row].id)
+    }
 }

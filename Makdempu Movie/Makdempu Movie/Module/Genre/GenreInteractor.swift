@@ -17,7 +17,7 @@ final class GenreInteractor {
 
 extension GenreInteractor: GenreInteractorInterface {
     func fetchListGenre() {
-        guard let url = URL(string: "\(APIConstants.baseURL)/genre/movie/list?api_key=\(APIConstants.key)") else { return }
+        guard let url = URL(string: "\(APIConstants.baseURL)/genre/movie/list\(APIConstants.key)") else { return }
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response,error in
             guard let data = data, error == nil else {
                 return
@@ -33,5 +33,4 @@ extension GenreInteractor: GenreInteractorInterface {
         }
         task.resume()
     }
-    
 }

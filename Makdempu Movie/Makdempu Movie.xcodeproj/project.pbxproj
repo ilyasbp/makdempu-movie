@@ -7,7 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650E29384DF7E104596791D5 /* Pods_Makdempu_Movie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12530A6CF8721F0FC8C7993 /* Pods_Makdempu_Movie.framework */; };
 		E968FF752B7A918E00B2AAA8 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FF742B7A918E00B2AAA8 /* Genre.swift */; };
+		E968FF922B7B22DA00B2AAA8 /* MovieListInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FF8C2B7B22DA00B2AAA8 /* MovieListInterfaces.swift */; };
+		E968FF932B7B22DA00B2AAA8 /* MovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FF8D2B7B22DA00B2AAA8 /* MovieListPresenter.swift */; };
+		E968FF942B7B22DA00B2AAA8 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FF8E2B7B22DA00B2AAA8 /* MovieListViewController.swift */; };
+		E968FF952B7B22DA00B2AAA8 /* MovieListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FF8F2B7B22DA00B2AAA8 /* MovieListInteractor.swift */; };
+		E968FF962B7B22DA00B2AAA8 /* MovieListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E968FF902B7B22DA00B2AAA8 /* MovieListViewController.xib */; };
+		E968FF972B7B22DA00B2AAA8 /* MovieListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FF912B7B22DA00B2AAA8 /* MovieListWireframe.swift */; };
+		E968FF9A2B7B297D00B2AAA8 /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FF982B7B297D00B2AAA8 /* MovieListCell.swift */; };
+		E968FF9B2B7B297D00B2AAA8 /* MovieListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E968FF992B7B297D00B2AAA8 /* MovieListCell.xib */; };
+		E968FF9D2B7B2FBF00B2AAA8 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FF9C2B7B2FBF00B2AAA8 /* Movie.swift */; };
+		E968FFA22B7B420F00B2AAA8 /* ExtUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FFA12B7B420F00B2AAA8 /* ExtUIImageView.swift */; };
 		E9D05B572B7A2073000D767F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D05B562B7A2073000D767F /* AppDelegate.swift */; };
 		E9D05B592B7A2073000D767F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D05B582B7A2073000D767F /* SceneDelegate.swift */; };
 		E9D05B5B2B7A2073000D767F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D05B5A2B7A2073000D767F /* ViewController.swift */; };
@@ -35,7 +46,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17BEF47B3193211A14390AB8 /* Pods-Makdempu Movie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makdempu Movie.debug.xcconfig"; path = "Target Support Files/Pods-Makdempu Movie/Pods-Makdempu Movie.debug.xcconfig"; sourceTree = "<group>"; };
+		3C9BE2D148E7623B968A856E /* Pods-Makdempu Movie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makdempu Movie.release.xcconfig"; path = "Target Support Files/Pods-Makdempu Movie/Pods-Makdempu Movie.release.xcconfig"; sourceTree = "<group>"; };
+		C12530A6CF8721F0FC8C7993 /* Pods_Makdempu_Movie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Makdempu_Movie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E968FF742B7A918E00B2AAA8 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		E968FF8C2B7B22DA00B2AAA8 /* MovieListInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListInterfaces.swift; sourceTree = "<group>"; };
+		E968FF8D2B7B22DA00B2AAA8 /* MovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenter.swift; sourceTree = "<group>"; };
+		E968FF8E2B7B22DA00B2AAA8 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
+		E968FF8F2B7B22DA00B2AAA8 /* MovieListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListInteractor.swift; sourceTree = "<group>"; };
+		E968FF902B7B22DA00B2AAA8 /* MovieListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListViewController.xib; sourceTree = "<group>"; };
+		E968FF912B7B22DA00B2AAA8 /* MovieListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListWireframe.swift; sourceTree = "<group>"; };
+		E968FF982B7B297D00B2AAA8 /* MovieListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
+		E968FF992B7B297D00B2AAA8 /* MovieListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListCell.xib; sourceTree = "<group>"; };
+		E968FF9C2B7B2FBF00B2AAA8 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E968FFA12B7B420F00B2AAA8 /* ExtUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIImageView.swift; sourceTree = "<group>"; };
 		E9D05B532B7A2073000D767F /* Makdempu Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Makdempu Movie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D05B562B7A2073000D767F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9D05B582B7A2073000D767F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,17 +93,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				650E29384DF7E104596791D5 /* Pods_Makdempu_Movie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61A5A7B51103960CE5837C78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17BEF47B3193211A14390AB8 /* Pods-Makdempu Movie.debug.xcconfig */,
+				3C9BE2D148E7623B968A856E /* Pods-Makdempu Movie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A60F8071C650C4B4893EFAE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C12530A6CF8721F0FC8C7993 /* Pods_Makdempu_Movie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E968FF9E2B7B41EF00B2AAA8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E968FFA12B7B420F00B2AAA8 /* ExtUIImageView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		E9D05B4A2B7A2073000D767F = {
 			isa = PBXGroup;
 			children = (
 				E9D05B552B7A2073000D767F /* Makdempu Movie */,
 				E9D05B542B7A2073000D767F /* Products */,
+				61A5A7B51103960CE5837C78 /* Pods */,
+				A60F8071C650C4B4893EFAE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +146,7 @@
 		E9D05B552B7A2073000D767F /* Makdempu Movie */ = {
 			isa = PBXGroup;
 			children = (
+				E968FF9E2B7B41EF00B2AAA8 /* Extension */,
 				E9D05BEB2B7A7E6C000D767F /* VIPER */,
 				E9D05B642B7A2075000D767F /* Info.plist */,
 				E9D05B562B7A2073000D767F /* AppDelegate.swift */,
@@ -125,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				E968FF742B7A918E00B2AAA8 /* Genre.swift */,
+				E968FF9C2B7B2FBF00B2AAA8 /* Movie.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -132,11 +186,11 @@
 		E9D05B702B7A3926000D767F /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				E9D05B762B7A3A56000D767F /* Review */,
-				E9D05B752B7A3A06000D767F /* Movie Detail */,
-				E9D05B742B7A39F3000D767F /* Movie List */,
 				E9D05B732B7A39EB000D767F /* Dashboard */,
 				E9D05B6A2B7A2300000D767F /* Genre */,
+				E9D05B752B7A3A06000D767F /* Movie Detail */,
+				E9D05B742B7A39F3000D767F /* Movie List */,
+				E9D05B762B7A3A56000D767F /* Review */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -157,6 +211,14 @@
 		E9D05B742B7A39F3000D767F /* Movie List */ = {
 			isa = PBXGroup;
 			children = (
+				E968FF982B7B297D00B2AAA8 /* MovieListCell.swift */,
+				E968FF992B7B297D00B2AAA8 /* MovieListCell.xib */,
+				E968FF8F2B7B22DA00B2AAA8 /* MovieListInteractor.swift */,
+				E968FF8C2B7B22DA00B2AAA8 /* MovieListInterfaces.swift */,
+				E968FF8D2B7B22DA00B2AAA8 /* MovieListPresenter.swift */,
+				E968FF8E2B7B22DA00B2AAA8 /* MovieListViewController.swift */,
+				E968FF902B7B22DA00B2AAA8 /* MovieListViewController.xib */,
+				E968FF912B7B22DA00B2AAA8 /* MovieListWireframe.swift */,
 			);
 			path = "Movie List";
 			sourceTree = "<group>";
@@ -195,9 +257,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9D05B672B7A2075000D767F /* Build configuration list for PBXNativeTarget "Makdempu Movie" */;
 			buildPhases = (
+				6243F36C182CA2907A5DABCC /* [CP] Check Pods Manifest.lock */,
 				E9D05B4F2B7A2073000D767F /* Sources */,
 				E9D05B502B7A2073000D767F /* Frameworks */,
 				E9D05B512B7A2073000D767F /* Resources */,
+				27F36FE6E849A059962E983D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,39 +310,91 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E968FF9B2B7B297D00B2AAA8 /* MovieListCell.xib in Resources */,
 				E9D05B632B7A2075000D767F /* LaunchScreen.storyboard in Resources */,
 				E9D05B7A2B7A421D000D767F /* DashboardViewController.xib in Resources */,
 				E9D05BEA2B7A7DDD000D767F /* GenreViewController.xib in Resources */,
 				E9D05B602B7A2075000D767F /* Assets.xcassets in Resources */,
+				E968FF962B7B22DA00B2AAA8 /* MovieListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27F36FE6E849A059962E983D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Makdempu Movie/Pods-Makdempu Movie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Makdempu Movie/Pods-Makdempu Movie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Makdempu Movie/Pods-Makdempu Movie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6243F36C182CA2907A5DABCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Makdempu Movie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E9D05B4F2B7A2073000D767F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E968FF922B7B22DA00B2AAA8 /* MovieListInterfaces.swift in Sources */,
 				E9D05BF32B7A7E89000D767F /* FormatterInterface.swift in Sources */,
+				E968FF932B7B22DA00B2AAA8 /* MovieListPresenter.swift in Sources */,
+				E968FF942B7B22DA00B2AAA8 /* MovieListViewController.swift in Sources */,
 				E9D05BE32B7A779F000D767F /* GenreViewController.swift in Sources */,
 				E9D05B5B2B7A2073000D767F /* ViewController.swift in Sources */,
 				E9D05BF22B7A7E89000D767F /* BaseWireframe.swift in Sources */,
 				E9D05BF72B7A7E89000D767F /* InteractorInterface.swift in Sources */,
+				E968FF9A2B7B297D00B2AAA8 /* MovieListCell.swift in Sources */,
 				E9D05BE62B7A779F000D767F /* GenreWireframe.swift in Sources */,
 				E9D05BD72B7A7655000D767F /* DashboardViewController.swift in Sources */,
 				E968FF752B7A918E00B2AAA8 /* Genre.swift in Sources */,
 				E9D05BD62B7A7655000D767F /* DashboardPresenter.swift in Sources */,
 				E9D05BF92B7A87FC000D767F /* APIConstants.swift in Sources */,
+				E968FF9D2B7B2FBF00B2AAA8 /* Movie.swift in Sources */,
 				E9D05BF52B7A7E89000D767F /* PresenterInterface.swift in Sources */,
 				E9D05BE12B7A779F000D767F /* GenreInterfaces.swift in Sources */,
 				E9D05B572B7A2073000D767F /* AppDelegate.swift in Sources */,
 				E9D05BF62B7A7E89000D767F /* ViewInterface.swift in Sources */,
+				E968FF952B7B22DA00B2AAA8 /* MovieListInteractor.swift in Sources */,
 				E9D05BD82B7A7655000D767F /* DashboardInteractor.swift in Sources */,
+				E968FFA22B7B420F00B2AAA8 /* ExtUIImageView.swift in Sources */,
 				E9D05BD52B7A7655000D767F /* DashboardInterfaces.swift in Sources */,
 				E9D05BF42B7A7E89000D767F /* UIStoryboardExtension.swift in Sources */,
 				E9D05BDA2B7A7655000D767F /* DashboardWireframe.swift in Sources */,
 				E9D05B592B7A2073000D767F /* SceneDelegate.swift in Sources */,
+				E968FF972B7B22DA00B2AAA8 /* MovieListWireframe.swift in Sources */,
 				E9D05BE42B7A779F000D767F /* GenreInteractor.swift in Sources */,
 				E9D05BE22B7A779F000D767F /* GenrePresenter.swift in Sources */,
 			);
@@ -335,7 +451,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -398,7 +514,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -419,6 +535,7 @@
 		};
 		E9D05B682B7A2075000D767F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17BEF47B3193211A14390AB8 /* Pods-Makdempu Movie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -446,6 +563,7 @@
 		};
 		E9D05B692B7A2075000D767F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C9BE2D148E7623B968A856E /* Pods-Makdempu Movie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
