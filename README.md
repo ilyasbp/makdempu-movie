@@ -1,6 +1,6 @@
 # Makdempu Movie
 
-![Makdempu Movie Logo](film-slate.png.png)
+![Makdempu Movie Logo](img/film-slate.png)
 
 Makdempu Movie is a simple iOS application that allows users to browse and discover the latest movies. With a clean and simple interface, users can easily find movies they are interested in, view movie details, read reviews, and watch trailers.
 
