@@ -29,4 +29,8 @@ final class MovieListWireframe: BaseWireframe<MovieListViewController> {
 // MARK: - Extensions -
 
 extension MovieListWireframe: MovieListWireframeInterface {
+    func routeToDetail(with movieId: Int) {
+        navigationController?.pushWireframe(MovieDetailWireframe(movieId: movieId))
+    }
+    
 }

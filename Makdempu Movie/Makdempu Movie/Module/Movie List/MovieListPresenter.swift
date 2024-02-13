@@ -33,7 +33,7 @@ extension MovieListPresenter: MovieListPresenterInterface {
         interactor.fetchMovieList(with: genreId)
     }
     
-    func interactorDidFetchMovie(with result: Result<[Movie], Error>) {
+    func interactorDidFetchMovies(with result: Result<[Movie], Error>) {
         switch result {
         case .success(let movie):
             view.update(with: movie)
@@ -42,4 +42,7 @@ extension MovieListPresenter: MovieListPresenterInterface {
         }
     }
     
+    func goToDetail(with movieId: Int) {
+        wireframe.routeToDetail(with: movieId)
+    }
 }

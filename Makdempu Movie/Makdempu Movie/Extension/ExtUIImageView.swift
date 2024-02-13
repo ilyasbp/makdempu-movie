@@ -22,7 +22,7 @@ extension UIImageView {
             }
         }.resume()
     }
-    func setImage(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
+    func setImage(from link: String, contentMode mode: ContentMode = .scaleAspectFill) {
         guard let url = URL(string: APIConstants.baseImageURL + link) else { return }
         downloaded(from: url, contentMode: mode)
     }

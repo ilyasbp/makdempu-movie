@@ -25,10 +25,10 @@ extension MovieListInteractor: MovieListInteractorInterface {
 //            let outputStr  = String(data: data, encoding: String.Encoding.utf8)! as String
             do {
                 let entities = try JSONDecoder().decode(MovieResponse.self, from: data)
-                self?.presenter?.interactorDidFetchMovie(with: .success(entities.results))
+                self?.presenter?.interactorDidFetchMovies(with: .success(entities.results))
             }
             catch {
-                self?.presenter?.interactorDidFetchMovie(with: .failure(error))
+                self?.presenter?.interactorDidFetchMovies(with: .failure(error))
             }
         }
         task.resume()

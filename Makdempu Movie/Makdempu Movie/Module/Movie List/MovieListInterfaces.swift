@@ -10,6 +10,7 @@
 import UIKit
 
 protocol MovieListWireframeInterface: WireframeInterface {
+    func routeToDetail(with movieId: Int)
 }
 
 protocol MovieListViewInterface: ViewInterface {
@@ -21,7 +22,9 @@ protocol MovieListViewInterface: ViewInterface {
 protocol MovieListPresenterInterface: PresenterInterface {
     func getMovieList(with genreId: Int)
     
-    func interactorDidFetchMovie(with result: Result<[Movie], Error>)
+    func interactorDidFetchMovies(with result: Result<[Movie], Error>)
+    
+    func goToDetail(with movieId: Int)
 }
 
 protocol MovieListInteractorInterface: InteractorInterface {

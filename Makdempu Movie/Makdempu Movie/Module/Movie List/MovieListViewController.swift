@@ -91,4 +91,8 @@ extension MovieListViewController: UICollectionViewDelegate, UICollectionViewDat
         let height = width * 1.9
         return CGSize(width: width, height: height)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.presenter.goToDetail(with: movies[indexPath.row].id ?? 0)
+    }
 }
