@@ -20,6 +20,7 @@ final class DashboardWireframe: BaseWireframe<DashboardViewController> {
         let interactor = DashboardInteractor()
         let presenter = DashboardPresenter(view: moduleViewController, interactor: interactor, wireframe: self)
         moduleViewController.presenter = presenter
+        interactor.presenter = presenter
     }
 
 }
@@ -28,9 +29,15 @@ final class DashboardWireframe: BaseWireframe<DashboardViewController> {
 
 extension DashboardWireframe: DashboardWireframeInterface {
     func routeToGenre() {
-//        let vc = Genre2Router.createModule()
         self.navigationController?.pushWireframe(GenreWireframe())
-//        self.viewController.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func routeToMovieList(with genreId: Int) {
+        navigationController?.pushWireframe(MovieListWireframe(genreId: genreId))
+    }
+    
+    func routeToMovieDetail(with movieId: Int) {
+        navigationController?.pushWireframe(MovieDetailWireframe(movieId: movieId))
     }
     
 }

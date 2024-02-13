@@ -10,7 +10,12 @@
 import UIKit
 
 final class DashboardViewController: UIViewController {
-
+    
+    var movies: [Movie] = []
+    
+    @IBOutlet weak var sv: UIScrollView!
+    @IBOutlet weak var cv_movielist: UICollectionView!
+    
     // MARK: - Public properties -
 
     var presenter: DashboardPresenterInterface!
@@ -19,22 +24,99 @@ final class DashboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        sv.contentInsetAdjustmentBehavior = .never
+        
+        cv_movielist.delegate = self
+        cv_movielist.dataSource = self
+        
+        cv_movielist.register(UINib(nibName: String(describing: MovieListCell.self), bundle: nil), forCellWithReuseIdentifier: MovieListCell.indentifier)
+        
+        presenter.getMovieList()
     }
     
     
     @IBAction func actionTapped(_ sender: Any) {
+        presenter.goToMovieList(with: 28)
     }
+    
     @IBAction func comedyTapped(_ sender: Any) {
+        presenter.goToMovieList(with: 35)
     }
+    
     @IBAction func dramaTapped(_ sender: Any) {
+        presenter.goToMovieList(with: 18)
     }
+    
     @IBAction func moreTapped(_ sender: Any) {
-        presenter.routeToGenre()
-//        self.navigationController?.pushViewController(GenreViewController(), animated: true)
+        presenter.goToGenre()
     }
 }
 
 // MARK: - Extensions -
 
 extension DashboardViewController: DashboardViewInterface {
+    func update(with movies: [Movie]) {
+        DispatchQueue.main.async {
+            self.movies = movies
+            self.cv_movielist.reloadData()
+            self.cv_movielist.addInfiniteScroll { [weak self] (collectionView) -> Void in
+                guard let strself = self else { return }
+                strself.presenter.getAdditionalMovies() { [weak self] movies in
+                    guard let strself = self else { return }
+                    DispatchQueue.main.async {
+                        if !movies.isEmpty {
+                            let startIndex = strself.movies.count
+                            strself.movies.append(contentsOf: movies)
+                            var indexPaths = [IndexPath]()
+                            for index in startIndex..<strself.movies.count {
+                                let indexPath = IndexPath(row: index, section: 0)
+                                indexPaths.append(indexPath)
+                            }
+                            collectionView.performBatchUpdates {
+                                collectionView.insertItems(at: indexPaths)
+                            }
+                        } else {
+                            let alert = UIAlertController(title: "Oops!", message: "This is the end of the page", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: .default))
+                            self?.present(alert, animated: true, completion: nil)
+                        }
+                        collectionView.finishInfiniteScroll()
+                    }
+                }
+            }
+        }
+    }
+    
+    func update(with error: String) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true,completion: nil)
+        }
+    }
+}
+
+extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return movies.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let movie = movies[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieListCell.indentifier, for: indexPath) as! MovieListCell
+        cell.iv_poster.setImage(from: movie.posterPath ?? "")
+        cell.lb_title.text = movie.title
+        cell.lb_date.text = movie.releaseDate
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (collectionView.frame.width - 50)/2
+        let height = width * 1.9
+        return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.presenter.goToMovieDetail(with: movies[indexPath.row].id ?? 0)
+    }
 }

@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashboardViewController" customModule="Makdempu_Movie" customModuleProvider="target">
             <connections>
+                <outlet property="cv_movielist" destination="hze-5y-HeS" id="JQK-Mh-65p"/>
+                <outlet property="sv" destination="8GB-Gh-Kzk" id="Jc5-ND-sYG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,26 +20,26 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8GB-Gh-Kzk">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GB-Gh-Kzk">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cc1-4h-rgq">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="1036.6666666666667"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Makdempu Movie!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsG-tP-TQv">
-                                    <rect key="frame" x="19.999999999999986" y="79" width="239.66666666666663" height="67"/>
+                                    <rect key="frame" x="19.999999999999986" y="20" width="239.66666666666663" height="67"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Millions of movies, TV shows and people to discover. Explore now." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gd3-RI-sFf">
-                                    <rect key="frame" x="20" y="156" width="353" height="40.666666666666657"/>
+                                    <rect key="frame" x="20" y="97" width="353" height="40.666666666666657"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdW-1A-hx0">
-                                    <rect key="frame" x="20" y="226.66666666666666" width="353" height="118.66666666666666"/>
+                                    <rect key="frame" x="20" y="167.66666666666666" width="353" height="118.66666666666666"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Your Favorite Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eig-5C-FYN">
                                             <rect key="frame" x="0.0" y="0.0" width="194" height="20.333333333333332"/>
@@ -186,22 +188,25 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRC-gk-BcT">
-                                    <rect key="frame" x="0.0" y="375.33333333333326" width="393" height="476.66666666666674"/>
+                                    <rect key="frame" x="0.0" y="316.33333333333331" width="393" height="720.33333333333348"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdk-fz-3kb">
-                                            <rect key="frame" x="20" y="0.0" width="131.66666666666666" height="20.333333333333332"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdk-fz-3kb">
+                                            <rect key="frame" x="20.000000000000007" y="0.0" width="121.66666666666669" height="20.333333333333332"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hze-5y-HeS">
-                                            <rect key="frame" x="0.0" y="30.333333333333371" width="393" height="446.33333333333331"/>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hze-5y-HeS">
+                                            <rect key="frame" x="0.0" y="30.333333333333371" width="393" height="690"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="690" id="Xhq-g2-pDL"/>
+                                            </constraints>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wJ6-i9-EJj">
                                                 <size key="itemSize" width="128" height="128"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="sectionInset" minX="20" minY="10" maxX="20" maxY="10"/>
                                             </collectionViewFlowLayout>
                                         </collectionView>
                                     </subviews>

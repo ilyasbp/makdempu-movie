@@ -11,14 +11,34 @@ import UIKit
 
 protocol DashboardWireframeInterface: WireframeInterface {
     func routeToGenre()
+    
+    func routeToMovieList(with genreId: Int)
+    
+    func routeToMovieDetail(with movieId: Int)
 }
 
 protocol DashboardViewInterface: ViewInterface {
+    func update(with movies: [Movie])
+    
+    func update(with error: String)
 }
 
 protocol DashboardPresenterInterface: PresenterInterface {
-    func routeToGenre()
+    func getMovieList()
+    
+    func interactorDidFetchMovies(with result: Result<[Movie], Error>)
+    
+    func getAdditionalMovies(completion: @escaping ([Movie]) -> Void)
+    
+    func goToGenre()
+    
+    func goToMovieList(with genreId: Int)
+    
+    func goToMovieDetail(with movieId: Int)
 }
 
 protocol DashboardInteractorInterface: InteractorInterface {
+    func fetchMovieList()
+    
+    func fetchAdditionalMovies(completion: @escaping (Result<[Movie], Error>) -> Void)
 }

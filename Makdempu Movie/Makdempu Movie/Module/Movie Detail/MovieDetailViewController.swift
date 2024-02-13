@@ -70,7 +70,7 @@ extension MovieDetailViewController: MovieDetailViewInterface {
             self.lb_genre.text = movie.genres?.map{ $0.name }.joined(separator: ", ")
             self.lb_rating.text = String(format: "%.1f", movie.voteAverage ?? 0)
             self.lb_overview.text = movie.overview
-            self.lb_status.text = (movie.releaseDate?.prefix(4) ?? "") + " • " + (movie.productionCountries?[0].iso3166_1 ?? "")
+            self.lb_status.text = (movie.releaseDate?.prefix(4) ?? "") + " • " + (movie.originalLanguage?.uppercased() ?? "")
         }
     }
     
