@@ -29,6 +29,7 @@ final class MovieListPresenter {
 // MARK: - Extensions -
 
 extension MovieListPresenter: MovieListPresenterInterface {
+    
     func getMovieList(with genreId: Int) {
         interactor.fetchMovieList(with: genreId)
     }
@@ -42,6 +43,16 @@ extension MovieListPresenter: MovieListPresenterInterface {
         }
     }
     
+    func getAdditionalMovies(with genreId: Int, completion: @escaping ([Movie]) -> Void) {
+        interactor.fetchAdditionalMovies(with: genreId) { result in
+            switch result {
+            case .success(let movies):
+                completion(movies)
+            case .failure:
+                completion([])
+            }
+        }
+    }
     func goToDetail(with movieId: Int) {
         wireframe.routeToDetail(with: movieId)
     }

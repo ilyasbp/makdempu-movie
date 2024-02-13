@@ -22,9 +22,6 @@ extension MovieDetailInteractor: MovieDetailInteractorInterface {
             guard let data = data, error == nil else {
                 return
             }
-            
-//            let outputStr  = String(data: data, encoding: String.Encoding.utf8)! as String
-            
             do {
                 let entities = try JSONDecoder().decode(Movie.self, from: data)
                 self?.presenter?.interactorDidFetchMovie(with: .success(entities))
@@ -42,9 +39,6 @@ extension MovieDetailInteractor: MovieDetailInteractorInterface {
             guard let data = data, error == nil else {
                 return
             }
-            
-            let outputStr  = String(data: data, encoding: String.Encoding.utf8)! as String
-            
             do {
                 let entities = try JSONDecoder().decode(TrailerResponse.self, from: data)
                 self?.presenter?.interactorDidFetchTrailer(with: .success(entities.results ?? []))

@@ -18,16 +18,15 @@ final class ReviewInteractor {
 
 extension ReviewInteractor: ReviewInteractorInterface {
     func fetchAdditionalReviews(with movieId: Int, completion: @escaping (Result<[Review], Error>) -> Void) {
-        page += 1
         guard let url = URL(string: "\(APIConstants.baseURL)/movie/\(movieId)/reviews\(APIConstants.key)&page=\(page)") else { return }
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response,error in
+        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             guard let data = data, error == nil else {
                 return
             }
-            
             do {
                 let entities = try JSONDecoder().decode(ReviewResponse.self, from: data)
                 completion(.success(entities.results ?? []))
+                self?.page += 1
             }
             catch {
                 completion(.failure(error))
@@ -42,12 +41,10 @@ extension ReviewInteractor: ReviewInteractorInterface {
             guard let data = data, error == nil else {
                 return
             }
-            
-//            let outputStr  = String(data: data, encoding: String.Encoding.utf8)! as String
-            
             do {
                 let entities = try JSONDecoder().decode(ReviewResponse.self, from: data)
                 self?.presenter?.interactorDidFetchReviews(with: .success(entities.results ?? []))
+                self?.page += 1
             }
             catch {
                 self?.presenter?.interactorDidFetchReviews(with: .failure(error))

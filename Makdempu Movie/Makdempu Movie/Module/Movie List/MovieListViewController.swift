@@ -44,21 +44,30 @@ extension MovieListViewController: MovieListViewInterface {
         DispatchQueue.main.async {
             self.movies = movies
             self.cv_movielist.reloadData()
-            self.cv_movielist.addInfiniteScroll { (collectionView) -> Void in
-                let startIndex = self.movies.count
-                self.movies.append(contentsOf: movies)
-                var indexPaths = [IndexPath]()
-                for index in startIndex..<self.movies.count {
-                    let indexPath = IndexPath(row: index, section: 0)
-                    indexPaths.append(indexPath)
+            self.cv_movielist.addInfiniteScroll { [weak self] (collectionView) -> Void in
+                guard let strself = self else { return }
+                strself.presenter.getAdditionalMovies(with: strself.genreId) { [weak self] movies in
+                    guard let strself = self else { return }
+                    DispatchQueue.main.async {
+                        if !movies.isEmpty {
+                            let startIndex = strself.movies.count
+                            strself.movies.append(contentsOf: movies)
+                            var indexPaths = [IndexPath]()
+                            for index in startIndex..<strself.movies.count {
+                                let indexPath = IndexPath(row: index, section: 0)
+                                indexPaths.append(indexPath)
+                            }
+                            collectionView.performBatchUpdates {
+                                collectionView.insertItems(at: indexPaths)
+                            }
+                        } else {
+                            let alert = UIAlertController(title: "Oops!", message: "This is the end of the page", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: .default))
+                            self?.present(alert, animated: true, completion: nil)
+                        }
+                        collectionView.finishInfiniteScroll()
+                    }
                 }
-                collectionView.performBatchUpdates({ () -> Void in
-                    // update collection view
-                    collectionView.insertItems(at: indexPaths)
-                }, completion: { (finished) -> Void in
-                    // finish infinite scroll animations
-                    collectionView.finishInfiniteScroll()
-                });
             }
         }
     }

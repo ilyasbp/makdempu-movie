@@ -11,21 +11,22 @@ import Foundation
 
 final class MovieListInteractor {
     var presenter: MovieListPresenter?
+    var page = 1
 }
 
 // MARK: - Extensions -
 
 extension MovieListInteractor: MovieListInteractorInterface {
     func fetchMovieList(with genreId: Int) {
-        guard let url = URL(string: "\(APIConstants.baseURL)/discover/movie\(APIConstants.key)&with_genres=\(genreId)") else { return }
+        guard let url = URL(string: "\(APIConstants.baseURL)/discover/movie\(APIConstants.key)&with_genres=\(genreId)&page=\(page)") else { return }
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             guard let data = data, error == nil else {
                 return
             }
-//            let outputStr  = String(data: data, encoding: String.Encoding.utf8)! as String
             do {
                 let entities = try JSONDecoder().decode(MovieResponse.self, from: data)
                 self?.presenter?.interactorDidFetchMovies(with: .success(entities.results))
+                self?.page += 1
             }
             catch {
                 self?.presenter?.interactorDidFetchMovies(with: .failure(error))
@@ -34,4 +35,21 @@ extension MovieListInteractor: MovieListInteractorInterface {
         task.resume()
     }
     
+    func fetchAdditionalMovies(with genreId: Int, completion: @escaping (Result<[Movie], Error>) -> Void) {
+        guard let url = URL(string: "\(APIConstants.baseURL)/discover/movie\(APIConstants.key)&with_genres=\(genreId)&page=\(page)") else { return }
+        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            do {
+                let entities = try JSONDecoder().decode(MovieResponse.self, from: data)
+                completion(.success(entities.results))
+                self?.page += 1
+            }
+            catch {
+                completion(.failure(error))
+            }
+        }
+        task.resume()
+    }
 }

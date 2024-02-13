@@ -24,9 +24,13 @@ protocol MovieListPresenterInterface: PresenterInterface {
     
     func interactorDidFetchMovies(with result: Result<[Movie], Error>)
     
+    func getAdditionalMovies(with genreId: Int, completion: @escaping ([Movie]) -> Void)
+    
     func goToDetail(with movieId: Int)
 }
 
 protocol MovieListInteractorInterface: InteractorInterface {
     func fetchMovieList(with genreId: Int)
+    
+    func fetchAdditionalMovies(with genreId: Int, completion: @escaping (Result<[Movie], Error>) -> Void)
 }
