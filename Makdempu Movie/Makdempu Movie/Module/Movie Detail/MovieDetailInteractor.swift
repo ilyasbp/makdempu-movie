@@ -37,7 +37,23 @@ extension MovieDetailInteractor: MovieDetailInteractorInterface {
     }
     
     func fetchMovieTrailer(with movieId: Int) {
-        
+        guard let url = URL(string: "\(APIConstants.baseURL)/movie/\(movieId)/videos\(APIConstants.key)") else { return }
+        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response,error in
+            guard let data = data, error == nil else {
+                return
+            }
+            
+            let outputStr  = String(data: data, encoding: String.Encoding.utf8)! as String
+            
+            do {
+                let entities = try JSONDecoder().decode(TrailerResponse.self, from: data)
+                self?.presenter?.interactorDidFetchTrailer(with: .success(entities.results ?? []))
+            }
+            catch {
+                self?.presenter?.interactorDidFetchTrailer(with: .failure(error))
+            }
+        }
+        task.resume()
     }
     
 }

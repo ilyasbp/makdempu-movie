@@ -25,6 +25,9 @@
 		E968FFAC2B7B50C200B2AAA8 /* MovieDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FFA62B7B50C200B2AAA8 /* MovieDetailInteractor.swift */; };
 		E968FFAD2B7B50C200B2AAA8 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E968FFA72B7B50C200B2AAA8 /* MovieDetailViewController.xib */; };
 		E968FFAE2B7B50C200B2AAA8 /* MovieDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FFA82B7B50C200B2AAA8 /* MovieDetailWireframe.swift */; };
+		E968FFB12B7B8CB000B2AAA8 /* TrailerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FFAF2B7B8CB000B2AAA8 /* TrailerCell.swift */; };
+		E968FFB22B7B8CB000B2AAA8 /* TrailerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E968FFB02B7B8CB000B2AAA8 /* TrailerCell.xib */; };
+		E968FFB42B7B90D500B2AAA8 /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968FFB32B7B90D500B2AAA8 /* Trailer.swift */; };
 		E9D05B572B7A2073000D767F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D05B562B7A2073000D767F /* AppDelegate.swift */; };
 		E9D05B592B7A2073000D767F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D05B582B7A2073000D767F /* SceneDelegate.swift */; };
 		E9D05B5B2B7A2073000D767F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D05B5A2B7A2073000D767F /* ViewController.swift */; };
@@ -72,6 +75,9 @@
 		E968FFA62B7B50C200B2AAA8 /* MovieDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailInteractor.swift; sourceTree = "<group>"; };
 		E968FFA72B7B50C200B2AAA8 /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
 		E968FFA82B7B50C200B2AAA8 /* MovieDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailWireframe.swift; sourceTree = "<group>"; };
+		E968FFAF2B7B8CB000B2AAA8 /* TrailerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerCell.swift; sourceTree = "<group>"; };
+		E968FFB02B7B8CB000B2AAA8 /* TrailerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrailerCell.xib; sourceTree = "<group>"; };
+		E968FFB32B7B90D500B2AAA8 /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
 		E9D05B532B7A2073000D767F /* Makdempu Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Makdempu Movie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D05B562B7A2073000D767F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9D05B582B7A2073000D767F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				E968FF742B7A918E00B2AAA8 /* Genre.swift */,
+				E968FFB32B7B90D500B2AAA8 /* Trailer.swift */,
 				E968FF9C2B7B2FBF00B2AAA8 /* Movie.swift */,
 			);
 			path = Entity;
@@ -244,6 +251,8 @@
 				E968FFA52B7B50C200B2AAA8 /* MovieDetailViewController.swift */,
 				E968FFA72B7B50C200B2AAA8 /* MovieDetailViewController.xib */,
 				E968FFA82B7B50C200B2AAA8 /* MovieDetailWireframe.swift */,
+				E968FFAF2B7B8CB000B2AAA8 /* TrailerCell.swift */,
+				E968FFB02B7B8CB000B2AAA8 /* TrailerCell.xib */,
 			);
 			path = "Movie Detail";
 			sourceTree = "<group>";
@@ -331,6 +340,7 @@
 				E968FFAD2B7B50C200B2AAA8 /* MovieDetailViewController.xib in Resources */,
 				E968FF9B2B7B297D00B2AAA8 /* MovieListCell.xib in Resources */,
 				E9D05B632B7A2075000D767F /* LaunchScreen.storyboard in Resources */,
+				E968FFB22B7B8CB000B2AAA8 /* TrailerCell.xib in Resources */,
 				E9D05B7A2B7A421D000D767F /* DashboardViewController.xib in Resources */,
 				E9D05BEA2B7A7DDD000D767F /* GenreViewController.xib in Resources */,
 				E9D05B602B7A2075000D767F /* Assets.xcassets in Resources */,
@@ -394,6 +404,7 @@
 				E9D05BE32B7A779F000D767F /* GenreViewController.swift in Sources */,
 				E9D05B5B2B7A2073000D767F /* ViewController.swift in Sources */,
 				E9D05BF22B7A7E89000D767F /* BaseWireframe.swift in Sources */,
+				E968FFB42B7B90D500B2AAA8 /* Trailer.swift in Sources */,
 				E9D05BF72B7A7E89000D767F /* InteractorInterface.swift in Sources */,
 				E968FF9A2B7B297D00B2AAA8 /* MovieListCell.swift in Sources */,
 				E9D05BE62B7A779F000D767F /* GenreWireframe.swift in Sources */,
@@ -408,6 +419,7 @@
 				E968FF9D2B7B2FBF00B2AAA8 /* Movie.swift in Sources */,
 				E9D05BF52B7A7E89000D767F /* PresenterInterface.swift in Sources */,
 				E9D05BE12B7A779F000D767F /* GenreInterfaces.swift in Sources */,
+				E968FFB12B7B8CB000B2AAA8 /* TrailerCell.swift in Sources */,
 				E968FFAC2B7B50C200B2AAA8 /* MovieDetailInteractor.swift in Sources */,
 				E9D05B572B7A2073000D767F /* AppDelegate.swift in Sources */,
 				E9D05BF62B7A7E89000D767F /* ViewInterface.swift in Sources */,

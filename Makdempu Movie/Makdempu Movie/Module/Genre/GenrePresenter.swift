@@ -38,7 +38,7 @@ extension GenrePresenter: GenrePresenterInterface {
         case .success(let genres):
             view.update(with: genres)
         case .failure:
-            view.update(with: "Periksa kembali internet anda")
+            view.update(with: "Periksa kembali koneksi internet anda")
         }
     }
     

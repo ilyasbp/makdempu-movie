@@ -15,6 +15,8 @@ protocol MovieDetailWireframeInterface: WireframeInterface {
 protocol MovieDetailViewInterface: ViewInterface {
     func update(with movie: Movie)
     
+    func update(with trailers: [Trailer])
+    
     func update(with error: String)
 }
 
@@ -23,7 +25,9 @@ protocol MovieDetailPresenterInterface: PresenterInterface {
     
     func interactorDidFetchMovie(with result: Result<Movie, Error>)
     
-//    func interactorDidFetchTrailer(with result: Result<Movie, Error>)
+    func getMovieTrailer(with movieId: Int)
+    
+    func interactorDidFetchTrailer(with result: Result<[Trailer], Error>)
 }
 
 protocol MovieDetailInteractorInterface: InteractorInterface {

@@ -12,6 +12,7 @@ import UIKit
 final class MovieDetailViewController: UIViewController {
     
     var movieId = 0
+    var trailers: [Trailer] = []
 
     @IBOutlet weak var sv: UIScrollView!
     @IBOutlet weak var iv_backdrop: UIImageView!
@@ -22,6 +23,7 @@ final class MovieDetailViewController: UIViewController {
     @IBOutlet weak var lb_genre: UILabel!
     @IBOutlet weak var lb_overview: UILabel!
     @IBOutlet weak var lb_status: UILabel!
+    @IBOutlet weak var lb_rating: UILabel!
     @IBOutlet weak var cv_trailer: UICollectionView!
     // MARK: - Public properties -
 
@@ -36,23 +38,39 @@ final class MovieDetailViewController: UIViewController {
         v_poster.layer.cornerRadius = 6
         v_poster.layer.masksToBounds = true
         
+        cv_trailer.delegate = self
+        cv_trailer.dataSource = self
+        cv_trailer.register(UINib(nibName: String(describing: TrailerCell.self), bundle: nil), forCellWithReuseIdentifier: TrailerCell.identifier)
+        
         presenter.getMovieDetail(with: movieId)
+        presenter.getMovieTrailer(with: movieId)
     }
-
+    
+    @IBAction func reviewTapped(_ sender: Any) {
+        
+    }
 }
 
 // MARK: - Extensions -
 
 extension MovieDetailViewController: MovieDetailViewInterface {
+    func update(with trailers: [Trailer]) {
+        DispatchQueue.main.async {
+            self.trailers = trailers
+            self.cv_trailer.reloadData()
+        }
+    }
+    
     func update(with movie: Movie) {
         DispatchQueue.main.async {
             self.iv_backdrop.setImage(from: movie.backdropPath ?? "")
             self.iv_poster.setImage(from: movie.posterPath ?? "")
-            self.lb_title.text = (movie.title ?? "") + " (\(movie.releaseDate?.prefix(4) ?? ""))"
+            self.lb_title.text = movie.title ?? ""
             self.lb_tagline.text = movie.tagline
             self.lb_genre.text = movie.genres?.map{ $0.name }.joined(separator: ", ")
+            self.lb_rating.text = String(format: "%.1f", movie.voteAverage ?? 0)
             self.lb_overview.text = movie.overview
-            self.lb_status.text = movie.status
+            self.lb_status.text = (movie.releaseDate?.prefix(4) ?? "") + " • " + (movie.productionCountries?[0].iso3166_1 ?? "")
         }
     }
     
@@ -64,4 +82,25 @@ extension MovieDetailViewController: MovieDetailViewInterface {
         }
     }
     
+}
+
+// MARK: - CollectionView -
+
+extension MovieDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return trailers.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let trailer = trailers[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TrailerCell.identifier, for: indexPath) as! TrailerCell
+        cell.v_player.load(withVideoId: trailer.key ?? "")
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let height = collectionView.frame.height
+        let width = height/9*16
+        return CGSize(width: width, height: height)
+    }
 }

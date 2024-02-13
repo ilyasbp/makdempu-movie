@@ -38,7 +38,7 @@ extension MovieListPresenter: MovieListPresenterInterface {
         case .success(let movie):
             view.update(with: movie)
         case .failure:
-            view.update(with: "Periksa kembali internet anda")
+            view.update(with: "Periksa kembali koneksi internet anda")
         }
     }
     

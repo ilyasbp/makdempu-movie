@@ -29,6 +29,19 @@ final class MovieDetailPresenter {
 // MARK: - Extensions -
 
 extension MovieDetailPresenter: MovieDetailPresenterInterface {
+    func getMovieTrailer(with movieId: Int) {
+        interactor.fetchMovieTrailer(with: movieId)
+    }
+    
+    func interactorDidFetchTrailer(with result: Result<[Trailer], Error>) {
+        switch result {
+        case .success(let trailers):
+            view.update(with: trailers)
+        case .failure:
+            view.update(with: "Periksa kembali koneksi internet anda")
+        }
+    }
+    
     func getMovieDetail(with movieId: Int) {
         interactor.fetchMovieDetail(with: movieId)
     }
@@ -38,7 +51,7 @@ extension MovieDetailPresenter: MovieDetailPresenterInterface {
         case .success(let movie):
             view.update(with: movie)
         case .failure:
-            view.update(with: "Periksa kembali internet anda")
+            view.update(with: "Periksa kembali koneksi internet anda")
         }
     }
     
