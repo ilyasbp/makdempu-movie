@@ -19,3 +19,7 @@ Makdempu Movie is a simple iOS application that allows users to browse and disco
 - [x] View movie details, including synopsis, rating, and release date
 - [x] Read user reviews about movies
 - [x] Watch movie trailers directly within the app
+
+## Screenshot
+
+<img src="img/dashboard.png" width="300"> <img src="img/genres.png" width="300"> <img src="img/movies.png" width="300"> <img src="img/detail.png" width="300"> <img src="img/trailer.png" width="300"> <img src="img/reviews.png" width="300">
