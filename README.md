@@ -22,4 +22,4 @@ Makdempu Movie is a simple iOS application that allows users to browse and disco
 
 ## Screenshot
 
-<img src="img/dashboard.png" width="300"> <img src="img/genres.png" width="300"> <img src="img/movies.png" width="300"> <img src="img/detail.png" width="300"> <img src="img/trailer.png" width="300"> <img src="img/reviews.png" width="300">
+<img src="img/dashboard.png" width="200"> <img src="img/genres.png" width="200"> <img src="img/movies.png" width="200"> <img src="img/detail.png" width="200"> <img src="img/trailer.png" width="200"> <img src="img/reviews.png" width="200">
