@@ -40,22 +40,27 @@ final class ReviewViewController: UIViewController {
 extension ReviewViewController: ReviewViewInterface {
     func update(with reviews: [Review]) {
         DispatchQueue.main.async {
-            self.reviews = reviews
-            self.tv_review.reloadData()
-            self.tv_review.addInfiniteScroll { (tableView) -> Void in
-                self.presenter.getAdditionalReviews(with: self.movieId) { [weak self] reviews in
-                    DispatchQueue.main.async {
-                        if !reviews.isEmpty {
-                            self?.reviews.append(contentsOf: reviews)
-                            self?.tv_review.reloadData()
-                        } else {
-                            let alert = UIAlertController(title: "Oops!", message: "This is the end of the page", preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "OK", style: .default))
-                            self?.present(alert, animated: true, completion: nil)
+            if !reviews.isEmpty {
+                self.reviews = reviews
+                self.tv_review.reloadData()
+                self.tv_review.addInfiniteScroll { (tableView) -> Void in
+                    self.presenter.getAdditionalReviews(with: self.movieId) { [weak self] reviews in
+                        DispatchQueue.main.async {
+                            if !reviews.isEmpty {
+                                self?.reviews.append(contentsOf: reviews)
+                                self?.tv_review.reloadData()
+                            } else {
+                                let alert = UIAlertController(title: "Oops!", message: "This is the end of the page", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                                self?.present(alert, animated: true, completion: nil)
+                            }
+                            tableView.finishInfiniteScroll()
                         }
-                        tableView.finishInfiniteScroll()
                     }
                 }
+            }
+            else {
+                self.tv_review.isHidden = true
             }
         }
     }
