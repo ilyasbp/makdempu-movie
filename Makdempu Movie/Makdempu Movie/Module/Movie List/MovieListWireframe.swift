@@ -13,10 +13,10 @@ final class MovieListWireframe: BaseWireframe<MovieListViewController> {
 
     // MARK: - Module setup -
 
-    init(genreId: Int) {
+    init(genre: Genre) {
         let moduleViewController = MovieListViewController()
         super.init(viewController: moduleViewController)
-        moduleViewController.genreId = genreId
+        moduleViewController.genre = genre
 
         let interactor = MovieListInteractor()
         let presenter = MovieListPresenter(view: moduleViewController, interactor: interactor, wireframe: self)

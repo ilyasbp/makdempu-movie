@@ -12,7 +12,7 @@ import UIKit
 protocol DashboardWireframeInterface: WireframeInterface {
     func routeToGenre()
     
-    func routeToMovieList(with genreId: Int)
+    func routeToMovieList(with genre: Genre)
     
     func routeToMovieDetail(with movieId: Int)
 }
@@ -32,7 +32,7 @@ protocol DashboardPresenterInterface: PresenterInterface {
     
     func goToGenre()
     
-    func goToMovieList(with genreId: Int)
+    func goToMovieList(with genre: Genre)
     
     func goToMovieDetail(with movieId: Int)
 }

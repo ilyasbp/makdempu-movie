@@ -36,15 +36,15 @@ final class DashboardViewController: UIViewController {
     
     
     @IBAction func actionTapped(_ sender: Any) {
-        presenter.goToMovieList(with: 28)
+        presenter.goToMovieList(with: Genre(id: 28, name: "Action"))
     }
     
     @IBAction func comedyTapped(_ sender: Any) {
-        presenter.goToMovieList(with: 35)
+        presenter.goToMovieList(with: Genre(id: 35, name: "Comedy"))
     }
     
     @IBAction func dramaTapped(_ sender: Any) {
-        presenter.goToMovieList(with: 18)
+        presenter.goToMovieList(with: Genre(id: 18, name: "Drama"))
     }
     
     @IBAction func moreTapped(_ sender: Any) {

@@ -88,7 +88,7 @@ extension ReviewViewController: UITableViewDelegate, UITableViewDataSource {
             cell.v_rating.isHidden = true
             return cell
         }
-        cell.lb_rating.text = String(rating)
+        cell.lb_rating.text = String(format: "%.1f", rating)
         return cell
     }
 }

@@ -28,8 +28,8 @@ final class GenreWireframe: BaseWireframe<GenreViewController> {
 // MARK: - Extensions -
 
 extension GenreWireframe: GenreWireframeInterface {
-    func routeToMovieList(with genreId: Int) {
-        self.navigationController?.pushWireframe(MovieListWireframe(genreId: genreId))
+    func routeToMovieList(with genre: Genre) {
+        self.navigationController?.pushWireframe(MovieListWireframe(genre: genre))
     }
     
 }

@@ -12,7 +12,7 @@ import UIScrollView_InfiniteScroll
 
 final class MovieListViewController: UIViewController {
 
-    var genreId: Int = 0
+    var genre: Genre?
     var movies: [Movie] = []
     
     @IBOutlet weak var cv_movielist: UICollectionView!
@@ -25,14 +25,14 @@ final class MovieListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Movie"
+        title = (genre?.name ?? "") + " Movie"
         
         cv_movielist.delegate = self
         cv_movielist.dataSource = self
         
         cv_movielist.register(UINib(nibName: String(describing: MovieListCell.self), bundle: nil), forCellWithReuseIdentifier: MovieListCell.indentifier)
         
-        presenter.getMovieList(with: genreId)
+        presenter.getMovieList(with: genre?.id ?? 0)
     }
 
 }
@@ -46,7 +46,7 @@ extension MovieListViewController: MovieListViewInterface {
             self.cv_movielist.reloadData()
             self.cv_movielist.addInfiniteScroll { [weak self] (collectionView) -> Void in
                 guard let strself = self else { return }
-                strself.presenter.getAdditionalMovies(with: strself.genreId) { [weak self] movies in
+                strself.presenter.getAdditionalMovies(with: strself.genre?.id ?? 0) { [weak self] movies in
                     guard let strself = self else { return }
                     DispatchQueue.main.async {
                         if !movies.isEmpty {

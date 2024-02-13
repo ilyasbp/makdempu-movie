@@ -32,8 +32,8 @@ extension DashboardWireframe: DashboardWireframeInterface {
         self.navigationController?.pushWireframe(GenreWireframe())
     }
     
-    func routeToMovieList(with genreId: Int) {
-        navigationController?.pushWireframe(MovieListWireframe(genreId: genreId))
+    func routeToMovieList(with genre: Genre) {
+        navigationController?.pushWireframe(MovieListWireframe(genre: genre))
     }
     
     func routeToMovieDetail(with movieId: Int) {

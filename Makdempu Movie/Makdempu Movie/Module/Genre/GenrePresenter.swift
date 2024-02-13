@@ -29,8 +29,8 @@ final class GenrePresenter {
 // MARK: - Extensions -
 
 extension GenrePresenter: GenrePresenterInterface {
-    func goToMovieList(with genreId: Int) {
-        wireframe.routeToMovieList(with: genreId)
+    func goToMovieList(with genre: Genre) {
+        wireframe.routeToMovieList(with: genre)
     }
     
     func interactorDidFetchGenre(with result: Result<[Genre], Error>) {

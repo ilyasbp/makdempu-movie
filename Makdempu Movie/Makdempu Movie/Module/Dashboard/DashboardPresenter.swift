@@ -57,8 +57,8 @@ extension DashboardPresenter: DashboardPresenterInterface {
         wireframe.routeToGenre()
     }
     
-    func goToMovieList(with genreId: Int) {
-        wireframe.routeToMovieList(with: genreId)
+    func goToMovieList(with genre: Genre) {
+        wireframe.routeToMovieList(with: genre)
     }
     
     func goToMovieDetail(with movieId: Int) {

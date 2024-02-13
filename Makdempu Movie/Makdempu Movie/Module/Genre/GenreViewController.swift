@@ -22,7 +22,7 @@ final class GenreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Genre"
+        title = "Genres"
         
         tv_genreList.delegate = self
         tv_genreList.dataSource = self
@@ -67,6 +67,6 @@ extension GenreViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.presenter.goToMovieList(with: self.genres[indexPath.row].id)
+        self.presenter.goToMovieList(with: self.genres[indexPath.row])
     }
 }
