@@ -10,11 +10,14 @@
 import UIKit
 
 protocol DashboardWireframeInterface: WireframeInterface {
+
     func routeToGenre()
     
     func routeToMovieList(with genre: Genre)
     
     func routeToMovieDetail(with movieId: Int)
+    
+    func exitApp()
 }
 
 protocol DashboardViewInterface: ViewInterface {
@@ -35,6 +38,8 @@ protocol DashboardPresenterInterface: PresenterInterface {
     func goToMovieList(with genre: Genre)
     
     func goToMovieDetail(with movieId: Int)
+    
+    func navigateBack()
 }
 
 protocol DashboardInteractorInterface: InteractorInterface {

@@ -29,6 +29,10 @@ final class GenrePresenter {
 // MARK: - Extensions -
 
 extension GenrePresenter: GenrePresenterInterface {
+    func navigateBack() {
+        wireframe.navigateBack()
+    }
+    
     func goToMovieList(with genre: Genre) {
         wireframe.routeToMovieList(with: genre)
     }

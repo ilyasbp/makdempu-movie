@@ -20,6 +20,7 @@ extension MovieDetailInteractor: MovieDetailInteractorInterface {
         guard let url = URL(string: "\(APIConstants.baseURL)/movie/\(movieId)\(APIConstants.key)") else { return }
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response,error in
             guard let data = data, error == nil else {
+                self?.presenter?.interactorDidFetchMovie(with: .failure(error!))
                 return
             }
             do {
@@ -37,6 +38,7 @@ extension MovieDetailInteractor: MovieDetailInteractorInterface {
         guard let url = URL(string: "\(APIConstants.baseURL)/movie/\(movieId)/videos\(APIConstants.key)") else { return }
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response,error in
             guard let data = data, error == nil else {
+                self?.presenter?.interactorDidFetchTrailer(with: .failure(error!))
                 return
             }
             do {

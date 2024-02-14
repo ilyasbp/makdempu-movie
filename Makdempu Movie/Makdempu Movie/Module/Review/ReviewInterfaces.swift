@@ -10,6 +10,8 @@
 import UIKit
 
 protocol ReviewWireframeInterface: WireframeInterface {
+    
+    func navigateBack()
 }
 
 protocol ReviewViewInterface: ViewInterface {
@@ -24,6 +26,8 @@ protocol ReviewPresenterInterface: PresenterInterface {
     func getAdditionalReviews(with movieId: Int, completion: @escaping ([Review]) -> Void)
     
     func interactorDidFetchReviews(with result: Result<[Review], Error>)
+    
+    func navigateBack()
 }
 
 protocol ReviewInteractorInterface: InteractorInterface {

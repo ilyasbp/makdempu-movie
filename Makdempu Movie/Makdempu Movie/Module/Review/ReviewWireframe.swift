@@ -29,4 +29,8 @@ final class ReviewWireframe: BaseWireframe<ReviewViewController> {
 // MARK: - Extensions -
 
 extension ReviewWireframe: ReviewWireframeInterface {
+    func navigateBack() {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

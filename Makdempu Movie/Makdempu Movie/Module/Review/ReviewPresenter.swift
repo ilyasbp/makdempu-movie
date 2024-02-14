@@ -29,6 +29,10 @@ final class ReviewPresenter {
 // MARK: - Extensions -
 
 extension ReviewPresenter: ReviewPresenterInterface {
+    func navigateBack() {
+        wireframe.navigateBack()
+    }
+    
     func getAdditionalReviews(with movieId: Int, completion: @escaping ([Review]) -> Void) {
         interactor.fetchAdditionalReviews(with: movieId) { result in
             switch result {

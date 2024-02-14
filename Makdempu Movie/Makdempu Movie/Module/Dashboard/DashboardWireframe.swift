@@ -28,6 +28,10 @@ final class DashboardWireframe: BaseWireframe<DashboardViewController> {
 // MARK: - Extensions -
 
 extension DashboardWireframe: DashboardWireframeInterface {
+    func exitApp() {
+        exit(0)
+    }
+    
     func routeToGenre() {
         self.navigationController?.pushWireframe(GenreWireframe())
     }

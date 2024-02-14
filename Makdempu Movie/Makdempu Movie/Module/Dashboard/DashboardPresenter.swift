@@ -29,6 +29,10 @@ final class DashboardPresenter {
 // MARK: - Extensions -
 
 extension DashboardPresenter: DashboardPresenterInterface {
+    func navigateBack() {
+        wireframe.exitApp()
+    }
+    
     func getMovieList() {
         interactor.fetchMovieList()
     }

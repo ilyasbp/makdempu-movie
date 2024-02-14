@@ -11,6 +11,8 @@ import UIKit
 
 protocol MovieListWireframeInterface: WireframeInterface {
     func routeToDetail(with movieId: Int)
+    
+    func navigateBack()
 }
 
 protocol MovieListViewInterface: ViewInterface {
@@ -27,6 +29,8 @@ protocol MovieListPresenterInterface: PresenterInterface {
     func getAdditionalMovies(with genreId: Int, completion: @escaping ([Movie]) -> Void)
     
     func goToDetail(with movieId: Int)
+    
+    func navigateBack()
 }
 
 protocol MovieListInteractorInterface: InteractorInterface {

@@ -29,6 +29,10 @@ final class MovieDetailPresenter {
 // MARK: - Extensions -
 
 extension MovieDetailPresenter: MovieDetailPresenterInterface {
+    func navigateBack() {
+        wireframe.navigateBack()
+    }
+    
     func goToReview(with movieId: Int) {
         wireframe.routeToReview(with: movieId)
     }

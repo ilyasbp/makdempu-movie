@@ -28,6 +28,10 @@ final class GenreWireframe: BaseWireframe<GenreViewController> {
 // MARK: - Extensions -
 
 extension GenreWireframe: GenreWireframeInterface {
+    func navigateBack() {
+        navigationController?.popViewController(animated: true)
+    }
+    
     func routeToMovieList(with genre: Genre) {
         self.navigationController?.pushWireframe(MovieListWireframe(genre: genre))
     }

@@ -29,6 +29,10 @@ final class MovieListPresenter {
 // MARK: - Extensions -
 
 extension MovieListPresenter: MovieListPresenterInterface {
+    func navigateBack() {
+        wireframe.navigateBack()
+    }
+    
     
     func getMovieList(with genreId: Int) {
         interactor.fetchMovieList(with: genreId)

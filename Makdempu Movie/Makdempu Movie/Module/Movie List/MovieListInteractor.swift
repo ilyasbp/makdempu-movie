@@ -21,6 +21,7 @@ extension MovieListInteractor: MovieListInteractorInterface {
         guard let url = URL(string: "\(APIConstants.baseURL)/discover/movie\(APIConstants.key)&with_genres=\(genreId)&page=\(page)") else { return }
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             guard let data = data, error == nil else {
+                self?.presenter?.interactorDidFetchMovies(with: .failure(error!))
                 return
             }
             do {
@@ -39,6 +40,7 @@ extension MovieListInteractor: MovieListInteractorInterface {
         guard let url = URL(string: "\(APIConstants.baseURL)/discover/movie\(APIConstants.key)&with_genres=\(genreId)&page=\(page)") else { return }
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             guard let data = data, error == nil else {
+                self?.presenter?.interactorDidFetchMovies(with: .failure(error!))
                 return
             }
             do {

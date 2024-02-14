@@ -39,7 +39,6 @@
 		E968FFC62B7BA64600B2AAA8 /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E968FFC42B7BA64600B2AAA8 /* ReviewCell.xib */; };
 		E9D05B572B7A2073000D767F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D05B562B7A2073000D767F /* AppDelegate.swift */; };
 		E9D05B592B7A2073000D767F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D05B582B7A2073000D767F /* SceneDelegate.swift */; };
-		E9D05B5B2B7A2073000D767F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D05B5A2B7A2073000D767F /* ViewController.swift */; };
 		E9D05B602B7A2075000D767F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9D05B5F2B7A2075000D767F /* Assets.xcassets */; };
 		E9D05B632B7A2075000D767F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9D05B612B7A2075000D767F /* LaunchScreen.storyboard */; };
 		E9D05B7A2B7A421D000D767F /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D05B782B7A421D000D767F /* DashboardViewController.xib */; };
@@ -99,7 +98,6 @@
 		E9D05B532B7A2073000D767F /* Makdempu Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Makdempu Movie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D05B562B7A2073000D767F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9D05B582B7A2073000D767F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E9D05B5A2B7A2073000D767F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E9D05B5F2B7A2075000D767F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9D05B622B7A2075000D767F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9D05B642B7A2075000D767F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 				E9D05BF82B7A87FC000D767F /* APIConstants.swift */,
 				E9D05B562B7A2073000D767F /* AppDelegate.swift */,
 				E9D05B582B7A2073000D767F /* SceneDelegate.swift */,
-				E9D05B5A2B7A2073000D767F /* ViewController.swift */,
 				E9D05B5F2B7A2075000D767F /* Assets.xcassets */,
 				E9D05B612B7A2075000D767F /* LaunchScreen.storyboard */,
 				E9D05B6F2B7A390D000D767F /* Entity */,
@@ -434,7 +431,6 @@
 				E968FF942B7B22DA00B2AAA8 /* MovieListViewController.swift in Sources */,
 				E968FFBE2B7BA48700B2AAA8 /* ReviewInteractor.swift in Sources */,
 				E9D05BE32B7A779F000D767F /* GenreViewController.swift in Sources */,
-				E9D05B5B2B7A2073000D767F /* ViewController.swift in Sources */,
 				E9D05BF22B7A7E89000D767F /* BaseWireframe.swift in Sources */,
 				E968FFB42B7B90D500B2AAA8 /* Trailer.swift in Sources */,
 				E9D05BF72B7A7E89000D767F /* InteractorInterface.swift in Sources */,

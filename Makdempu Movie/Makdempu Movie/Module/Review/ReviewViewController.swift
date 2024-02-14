@@ -68,7 +68,9 @@ extension ReviewViewController: ReviewViewInterface {
     func update(with error: String) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            alert.addAction(UIAlertAction(title: "OK", style: .default){ [weak self] _ in
+                self?.presenter.navigateBack()
+            })
             self.present(alert, animated: true,completion: nil)
         }
     }

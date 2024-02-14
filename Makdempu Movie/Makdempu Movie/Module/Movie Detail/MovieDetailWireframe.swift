@@ -29,6 +29,10 @@ final class MovieDetailWireframe: BaseWireframe<MovieDetailViewController> {
 // MARK: - Extensions -
 
 extension MovieDetailWireframe: MovieDetailWireframeInterface {
+    func navigateBack() {
+        navigationController?.popViewController(animated: true)
+    }
+    
     func routeToReview(with movieId: Int) {
         navigationController?.pushWireframe(ReviewWireframe(movieId: movieId))
     }
